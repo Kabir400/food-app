@@ -1,0 +1,218 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 80px 30px 80px;
+  background: #e8e8e8;
+  flex-wrap: wrap-reverse;
+}
+
+.logoContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 19px;
+}
+
+.logo2 {
+  width: 141px;
+}
+.apps {
+  width: 227px;
+}
+
+.rightContainer {
+  display: flex;
+  gap: 29px;
+  margin-bottom: 42px;
+}
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.inboxHeading {
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+.inboxInputBox {
+  display: flex;
+}
+.inboxInput {
+  border-radius: 120px;
+
+  outline: none;
+  border: none;
+  background: #d9d9d9;
+  color: #00000099;
+
+  padding: 3px 66px 3px 22px;
+  width: 253px;
+  font-size: 14px;
+}
+.inboxSubmit {
+  color: white;
+  align-self: center;
+  background: #fc8a06;
+  padding: 10px 28px;
+  border-radius: 120px;
+  transform: translate(-58px);
+}
+.inboxSubheading {
+  color: #03081f;
+  font-size: 11px;
+  word-spacing: -1px;
+  transform: translate(22px);
+}
+.inboxIcon {
+  width: 27px;
+}
+.inboxIconContainer {
+  transform: translate(18px);
+}
+.legalLinks,
+.ImportantLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.legalLink,
+.importantLink {
+  text-decoration: underline;
+  font-size: 13px;
+}
+.legalHeading,
+.importantHeading {
+  font-size: 14px;
+}
+
+.bottom {
+  background-color: #03081f;
+  padding: 21px 82px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+.bottomText {
+  color: white;
+  font-size: 10px;
+}
+
+.bottomRightContainer {
+  display: flex;
+  gap: 20px;
+}
+.logoText {
+  font-size: 12px;
+}
+.inboxSubmit {
+  padding: 10px 20px;
+  font-size: 14px;
+}
+@media (max-width: 1180px) {
+  .logoContainer {
+    gap: 85px;
+    flex-direction: row;
+  }
+  .container {
+    justify-content: center;
+  }
+  .bottom {
+    justify-content: center;
+  }
+}
+@media (max-width: 935px) {
+  .logo2 {
+    width: 127px;
+  }
+  .apps {
+    width: 129px;
+  }
+  .legalLink,
+  .importantLink {
+    font-size: 11px;
+  }
+  .logoText {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 830px) {
+  .container {
+    padding: 30px 11px 36px 16px;
+  }
+}
+@media (max-width: 675px) {
+  .container {
+    flex-wrap: nowrap;
+    flex-direction: column;
+    gap: 50px;
+  }
+  .logoContainer {
+    flex-direction: column;
+    gap: 19px;
+    align-self: center;
+  }
+  .logo2 {
+    width: 206px;
+  }
+  .apps {
+    width: 263px;
+  }
+  .logoText {
+    font-size: 13px;
+  }
+  .rightContainer {
+    flex-direction: column;
+  }
+  .inputContainer {
+    transform: translate(51px);
+  }
+  .inboxHeading {
+    font-size: 19px;
+  }
+  .inboxInput {
+    width: 290px;
+  }
+  .rightContainer {
+    align-items: center;
+  }
+  .inboxIcon {
+    width: 35px;
+  }
+  .inboxSubheading {
+    font-size: 14px;
+  }
+  .legalLinks,
+  .ImportantLinks {
+    transform: translate(-43px);
+  }
+  .legalLink,
+  .importantLink {
+    font-size: 13px;
+  }
+  .legalHeading,
+  .importantHeading {
+    font-size: 16px;
+  }
+  .bottomRightContainer {
+    display: none;
+  }
+}
+
+@media (max-width: 430px) {
+  .inboxHeading {
+    font-size: 15px;
+  }
+  .inputContainer {
+    margin-right: 20px;
+  }
+  .inboxInput {
+    width: 262px;
+  }
+  .inboxSubheading {
+    font-size: 12px;
+  }
+  .inboxIcon {
+    width: 32px;
+  }
+}

@@ -1,0 +1,139 @@
+.authBody {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 80vh;
+}
+.authLeft {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+}
+.authRight {
+  width: 50%;
+  height: 100%;
+}
+.authLeftContainer {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.authRightContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.authImg {
+  width: 60%;
+  height: 95%;
+  margin-right: 50px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.logo {
+  width: 190px;
+  align-self: center;
+  margin: 30px 0px 19px;
+}
+.welcomeMsg {
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.inputContainer {
+  margin-top: 21px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.input {
+  width: 100%;
+  padding: 10px 20px;
+  border: 1px solid #00000066;
+  border-radius: 100px;
+  outline: none;
+  font-size: 14px;
+  color: #8897ad;
+  margin-top: 5px;
+}
+.inputButton {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fc8a06;
+  color: white;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: 500;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease, color 0.3s ease;
+}
+.inputButton:hover {
+  background: #ea8007;
+  color: #fff4e0;
+  transform: scale(1.05);
+}
+.inputText {
+  color: #313957;
+  align-self: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-size: 17px;
+  transition: transform 0.3s ease;
+  text-decoration: none;
+  cursor: pointer;
+}
+.inputText:hover {
+  transform: scale(1.05);
+}
+.inputLink {
+  color: #fc8a06;
+}
+
+@media (max-width: 1300px) {
+  .authLeftContainer {
+    width: 484px;
+  }
+  .authLeft {
+    justify-content: center;
+    width: 100%;
+  }
+  .authRight {
+    display: none;
+  }
+}
+
+@media (max-width: 700px) {
+  .authLeftContainer {
+    width: 80%;
+  }
+}
+
+@media (max-width: 500px) {
+  .logo {
+    width: 150px !important;
+  }
+  .welcomeMsg {
+    font-size: 22px !important;
+  }
+  .inputLable {
+    font-size: 13px !important;
+  }
+  .inputButton {
+    font-size: 17px;
+  }
+  .inputText {
+    font-size: 15px;
+  }
+  .inputText {
+    margin-top: 1px !important;
+  }
+}
