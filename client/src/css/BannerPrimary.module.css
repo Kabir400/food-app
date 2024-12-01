@@ -1,0 +1,288 @@
+.bannerContainer {
+  background-color: #fbfbfb;
+  border: 1px solid #00000033;
+  height: 413px;
+  width: 90vw;
+  margin: auto;
+  margin-bottom: 36px;
+}
+.smallPrimaryBanner {
+  display: none;
+}
+.bannerLeftContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  justify-content: center;
+  height: 100%;
+  position: relative;
+  margin-left: 62px;
+}
+.bannerText {
+  font-size: 12px;
+  color: #03081f;
+}
+.bannerHeading {
+  color: #03081f;
+  font-size: 40px;
+}
+.bannerHeadingSpan {
+  color: #fc8a06;
+}
+.bannerSubHeading {
+  color: #03081f;
+  font-size: 10px;
+  margin-top: 10px;
+}
+.searchBox {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+.input {
+  border: 1px solid #00000066;
+  background-color: #ffffff;
+  padding: 10px 50px 10px 20px;
+  border-radius: 120px;
+  outline: none;
+}
+.search {
+  background: #fc8a06;
+  padding: 10px 30px;
+  border-radius: 120px;
+  transform: translate(-46px);
+  font-weight: 500;
+  font-size: 15px;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+}
+.bannerBg {
+  position: absolute;
+  width: 47%;
+  right: 0;
+  top: 0;
+  height: 100%;
+  z-index: 997;
+}
+.bannerImg1 {
+  /* width: 589px;
+  position: absolute;
+  bottom: 0;
+  left: 20%;
+  z-index: 999; */
+  width: 584px;
+  position: absolute;
+  bottom: 0;
+  left: 20%;
+  z-index: 999;
+}
+.bannerImg2 {
+  /* width: 261px;
+  position: absolute;
+  bottom: 0;
+  left: 51%;
+  z-index: 998; */
+  width: 252px;
+  position: absolute;
+  bottom: 0;
+  left: 49%;
+  z-index: 998;
+}
+.one {
+  position: absolute;
+  width: 14px;
+  top: 5%;
+  right: 17%;
+  z-index: 1111;
+}
+.two {
+  position: absolute;
+  top: 35%;
+  right: 10%;
+  width: 29px;
+  z-index: 1111;
+}
+.three {
+  position: absolute;
+  top: 72%;
+  right: 9%;
+  width: 29px;
+  z-index: 1111;
+}
+.rightArrow {
+  display: none;
+}
+@media (max-width: 1250px) {
+  .bannerText {
+    font-size: 11px;
+  }
+  .bannerHeading {
+    font-size: 32px;
+  }
+  .bannerSubHeading {
+    font-size: 9px;
+  }
+  .input {
+    width: 203px;
+  }
+  .search {
+    padding: 10px 23px;
+  }
+  .bannerImg1 {
+    width: 457px;
+    left: 20%;
+  }
+  .bannerImg2 {
+    width: 209px;
+    left: 49%;
+  }
+  .bannerContainer {
+    height: 337px;
+  }
+  .three,
+  .two,
+  .one {
+    display: none;
+  }
+  /* .three{
+    top: 71%;
+    left: 89%;
+    width: 17px;
+  }
+  .two {
+    left: 87%;
+    top: 33%;
+    width: 20px;
+  }
+  .one {
+    width: 10px;
+    top: 2%;
+    left: 83%;
+  } */
+}
+
+@media (max-width: 880px) {
+  .bannerText {
+    font-size: 8px;
+  }
+
+  .bannerHeading {
+    font-size: 27px;
+  }
+  .bannerSubHeading {
+    font-size: 7px;
+  }
+  .search {
+    padding: 8px 13px;
+    font-size: 13px;
+  }
+  .input {
+    width: 184px;
+    font-size: 12px;
+    padding: 8px 50px 8px 20px;
+  }
+  .bannerContainer {
+    height: 272px;
+  }
+  .bannerBg {
+    width: 40%;
+  }
+  .bannerImg1 {
+    width: 359px;
+    left: 23%;
+  }
+  .bannerImg2 {
+    width: 165px;
+    left: 56%;
+  }
+}
+@media (max-width: 670px) {
+  .bannerContainer {
+    width: 95vw;
+    min-height: 272px;
+    height: auto;
+  }
+  .bannerLeftContainer {
+    background-color: #03081f;
+    border-radius: 12px;
+    padding: 20px;
+    gap: 0;
+    margin-left: 0;
+  }
+  .bannerText {
+    color: white;
+  }
+  .bannerHeading {
+    color: white;
+  }
+  .bannerSubHeading {
+    color: white;
+  }
+  .bannerBg,
+  .bannerImg1,
+  .bannerImg2 {
+    display: none;
+  }
+  .bannerText {
+    font-size: 12px;
+    text-align: center;
+  }
+  .bannerHeading {
+    font-size: 40px;
+    text-align: center;
+  }
+  .bannerSubHeading {
+    font-size: 11px;
+    text-align: center;
+  }
+  .searchBox {
+    align-self: center;
+  }
+  .input {
+    padding: 12px 50px 12px 20px;
+    width: 203px;
+  }
+  .search {
+    padding: 10px;
+    border-radius: 50%;
+    transform: translate(-37px);
+  }
+  .rightArrow {
+    display: block;
+    width: 25px;
+  }
+  .searchText {
+    display: none;
+  }
+}
+
+@media (max-width: 450px) {
+  .bannerText {
+    font-size: 10px;
+  }
+  .bannerHeading {
+    font-size: 32px;
+  }
+  .bannerSubHeading {
+    font-size: 10px;
+  }
+  .input {
+    width: 176px;
+    padding: 10px 50px 10px 20px;
+  }
+  .search {
+    padding: 7px;
+  }
+}
+@media (max-width: 365px) {
+  .bannerText {
+    font-size: 8px;
+  }
+  .bannerHeading {
+    font-size: 28px;
+  }
+  .bannerSubHeading {
+    font-size: 8px;
+  }
+}

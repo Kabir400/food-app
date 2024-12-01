@@ -1,0 +1,261 @@
+.container {
+  width: 90vw;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 41px;
+}
+.offerContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 47px;
+  flex-wrap: wrap;
+}
+.smallOfferBtn {
+  display: none;
+}
+
+.offerTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.offerButtonContainer {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+.offerImgBox {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+.offerImg {
+  width: 32%;
+}
+.offerWrap {
+  width: 34%;
+}
+.offerButton {
+  border: 1px solid #fc8a06;
+  border-radius: 120px;
+  padding: 10px 20px;
+  color: #fc8a06;
+}
+/* category */
+.categoryContainerTop {
+  margin-top: 33px;
+}
+.categoryText {
+  margin-bottom: 33px;
+}
+.categoryContainer {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.categoryBox {
+  border: 1px solid #0000001a;
+  border-radius: 12px;
+}
+.categoryNoWrap {
+  width: calc(90% / 6);
+  background: #f5f5f5;
+}
+.categoryImg {
+  /* width: calc(85vw / 6); */
+  width: 100%;
+}
+.categoryWrap {
+  width: calc(100% / 6);
+}
+.categoryBottom {
+  padding: 3px 15px;
+  background-color: #f5f5f5;
+}
+/* .categoryBottomHeading {
+  font-weight: 600;
+} */
+.categoryBottomHeading {
+  font-weight: 600;
+  white-space: normal;
+  word-wrap: break-word;
+  overflow: visible;
+}
+.categoryBottomText {
+  font-size: 11px;
+  color: #fc8a06;
+}
+.categoryContainerTop {
+  margin-bottom: 30px;
+}
+
+/* resturant */
+.resturantContainerTop {
+  margin-top: 33px;
+}
+.resturantText {
+  margin-bottom: 33px;
+}
+.resturantContainer {
+  display: flex;
+  gap: 16px;
+  overflow: auto;
+  white-space: nowrap;
+  flex-wrap: nowrap;
+  margin-bottom: 20px;
+}
+.resturantBox {
+  border: 1px solid #0000001a;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+
+  width: 208px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  /* width: calc(90vw / 6); */
+}
+
+.resturantImg {
+  /* width: calc(85vw / 6); */
+  width: 100%;
+}
+
+.resturantBottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 14px 15px;
+  background-color: #fc8a06;
+  color: white;
+  font-weight: 600;
+  border-radius: 0px 0px 12px 12px;
+}
+
+@media (max-width: 1300px) {
+  .box {
+    width: 100% !important;
+  }
+  .categoryWrap {
+    width: calc(90% / 6) !important;
+  }
+  .offerWrap {
+    width: 32% !important;
+  }
+}
+
+@media (max-width: 950px) {
+  .offerText,
+  .categoryText,
+  .resturantText {
+    font-size: 14px;
+  }
+  .offerButtonText {
+    font-size: 12px;
+  }
+  .offerButton {
+    padding: 8px 13px;
+    font-size: 12px;
+  }
+  .categoryContainer {
+    overflow: auto;
+    white-space: nowrap;
+    flex-wrap: nowrap;
+  }
+  .categoryNoWrap {
+    width: auto;
+  }
+  .categoryImg {
+    width: 187px;
+  }
+}
+
+@media (max-width: 850px) {
+  .offerText,
+  .categoryText,
+  .resturantText {
+    font-size: 12px;
+  }
+  .offerButtonText {
+    font-size: 10px;
+  }
+  .offerButton {
+    padding: 6px 10px;
+    font-size: 10px;
+  }
+
+  .offerImg {
+    flex: 0 0 240px; /* Set a fixed width for each image */
+  }
+
+  .offerImgBox {
+    overflow: auto;
+    white-space: nowrap;
+    flex-wrap: nowrap;
+  }
+  .offerButtonContainer {
+    gap: 17px;
+  }
+
+  .categoryContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(152px, 1fr));
+    gap: 12px;
+    overflow: visible;
+  }
+
+  .categoryBox {
+    width: auto;
+  }
+  .categoryImg {
+    width: 100%;
+  }
+  .resturantBox {
+    width: 160px;
+  }
+  .resturantBottom {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 600px) {
+  .smallOfferBtn {
+    display: flex;
+    padding: 10px;
+    border: 1px solid #03081f;
+    border-radius: 120px;
+    gap: 10px;
+  }
+  .offerButtonContainer {
+    display: none;
+  }
+  .offerBtnRightArrow {
+    width: 20px;
+    transform: rotate(90deg);
+    height: 20px;
+  }
+  .smallOfferBtnText {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .smallOfferBtn {
+    gap: 6px;
+    padding: 7px;
+  }
+  .offerBtnRightArrow {
+    width: 13px;
+    height: 13px;
+  }
+  .smallOfferBtnText {
+    font-size: 8px;
+  }
+  .offerImg {
+    flex: 0 0 174px;
+  }
+  .offerText {
+    font-size: 9px;
+  }
+}

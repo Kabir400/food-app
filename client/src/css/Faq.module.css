@@ -1,0 +1,277 @@
+.container {
+  width: 90vw;
+  margin: auto;
+  background-color: #d9d9d9;
+  border-radius: 12px;
+  /* opacity: 30%; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 60px 20px;
+
+  margin-top: 35px;
+  margin-bottom: 35px;
+}
+
+.box {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.faqTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faqTopHeading {
+  font-size: 19px;
+}
+.faqTopLinkDiv {
+  font-size: 14px;
+  border: 1px solid #fc8a06;
+  padding: 10px 20px;
+  border-radius: 120px;
+  font-weight: 600;
+}
+.faqTopLink {
+  font-size: 14px;
+}
+
+.faqTopLinkContainer {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.faqBottom {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 60px;
+  display: flex;
+  gap: 50px;
+}
+
+.faqBottomLeft {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.faqBottomLeftHeading {
+  font-weight: 600;
+  border-radius: 120px;
+  padding: 10px 20px;
+  background: #fc8a06;
+  text-align: center;
+}
+.faqBottomLeftText {
+  font-weight: 600;
+  text-align: center;
+}
+
+.faqBottomRight {
+  display: flex;
+  width: 60%;
+  flex-direction: column;
+  gap: 25px;
+}
+.faqBottomRightTop {
+  display: flex;
+  gap: 20px;
+}
+.faqBottomRightTopBox {
+  background: #d9d9d9;
+
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  width: 33%;
+}
+.faqBottomRightTopBoxText {
+  font-size: 12px;
+  text-align: center;
+  font-weight: 500;
+}
+.faqImg {
+  width: 95px;
+}
+.faqBottomRightBottom {
+  text-align: center;
+  font-size: 13px;
+}
+
+@media (max-width: 1300px) {
+  .faqTopHeading {
+    font-size: 14px;
+  }
+  .faqTopLinkDiv,
+  .faqTopLink {
+    font-size: 9px;
+  }
+  .faqBottomLeftHeading,
+  .faqBottomLeftText {
+    font-size: 10px;
+  }
+  .faqImg {
+    width: 60px;
+  }
+  .faqBottomRightTopBoxHeading {
+    font-size: 9px;
+  }
+  .faqBottomRightTopBoxText {
+    font-size: 7px;
+  }
+  .faqBottomRightTop {
+    gap: 8px;
+  }
+  .faqBottomRightBottom {
+    font-size: 8px;
+  }
+  .faqBottom {
+    gap: 34px;
+    padding: 52px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .faqBottom {
+    gap: 19px;
+    padding: 36px;
+  }
+  .faqBottomLeftHeading,
+  .faqBottomLeftText {
+    font-size: 8px;
+    padding: 9px;
+  }
+  .faqBottomRightTopBox {
+    padding: 10px;
+  }
+  .faqBottomLeft {
+    gap: 0;
+  }
+}
+
+@media (max-width: 760px) {
+  .box {
+    gap: 23px;
+    width: 99%;
+  }
+  .faqTopHeading {
+    font-size: 10px;
+  }
+  .faqTopLinkDiv {
+    font-size: 6px;
+    padding: 4px 6px;
+  }
+  .faqTopLink {
+    font-size: 6px;
+  }
+  .faqBottom {
+    padding: 21px;
+  }
+  .faqBottomLeftHeading,
+  .faqBottomLeftText {
+    font-size: 6px;
+  }
+  .faqBottomRightTopBoxHeading {
+    font-size: 6px;
+  }
+  .faqImg {
+    width: 38px;
+  }
+  .faqBottomRightTopBoxText {
+    font-size: 5px;
+  }
+  .faqBottomRight {
+    gap: 15px;
+  }
+  .faqBottomRightBottom {
+    font-size: 6px;
+  }
+}
+
+@media (max-width: 530px) {
+  .container {
+    background-color: white;
+    margin-top: 0;
+  }
+  .box {
+    align-items: center;
+    width: 100%;
+    gap: 15px;
+  }
+  .faqTopLinkContainer {
+    display: none;
+  }
+  .faqBottom {
+    flex-direction: column;
+    align-items: center;
+  }
+  .faqTopHeading {
+    font-size: 20px;
+  }
+  .faqBottomLeft {
+    width: 100%;
+  }
+  .faqBottomLeftHeading {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+  .faqBottomLeftText {
+    font-size: 16px;
+  }
+  .faqBottomLeft {
+    gap: 15px;
+  }
+  .faqBottomRight {
+    width: 100%;
+    background: #03081f;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    gap: 30px;
+  }
+  .faqBottomRightTop {
+    align-items: center;
+    flex-direction: column;
+    gap: 19px;
+  }
+  .faqBottomRightTopBox {
+    padding: 16px;
+    width: 58%;
+  }
+  .faqBottomRightTopBoxHeading {
+    font-size: 15px;
+    font-size: 15px;
+  }
+  .faqImg {
+    width: 63px;
+  }
+  .faqBottomRightTopBoxText {
+    font-size: 12px;
+  }
+  .faqBottomRightBottom {
+    font-size: 10px;
+    color: white;
+    width: 90%;
+    margin: auto;
+  }
+}
+
+@media (max-width: 380px) {
+  .faqTopHeading {
+    font-size: 18px;
+  }
+  .faqBottomLeftHeading,
+  .faqBottomLeftText {
+    font-size: 13px;
+  }
+  .faqBottomRightTopBox {
+    width: 82%;
+  }
+}

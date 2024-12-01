@@ -1,0 +1,320 @@
+.nav {
+  margin-bottom: 22px;
+}
+.navSmall {
+  display: none;
+}
+.smallLocation {
+  display: none;
+}
+.navTop {
+  width: 85vw;
+  margin: auto;
+  display: flex;
+  gap: 20px;
+}
+.navTop {
+  display: flex;
+  justify-content: space-between;
+}
+.offer {
+  display: flex;
+  gap: 10px;
+  margin-top: 22px;
+}
+.offerText {
+  font-size: 12px;
+}
+.offerSpan {
+  color: #fc8a06;
+}
+.star {
+  font-size: 13px;
+}
+.addressCart {
+  display: flex;
+  gap: 20px;
+}
+.address {
+  display: flex;
+  gap: 10px;
+  margin-top: 22px;
+}
+.locationIcon {
+  width: 14px;
+  height: 14px;
+  margin-top: 3px;
+}
+.locationText {
+  font-size: 12px;
+}
+.locationLink {
+  color: #fc8a06;
+  font-size: 12px;
+}
+
+.cartContainer {
+  display: flex;
+  background: #028643;
+  width: 221px;
+  border: 1px solid #0000001a;
+  /* padding: 9px 18px; */
+  border-radius: 0 0 12px 12px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.cartContainer:hover {
+  transform: scale(1.05);
+}
+.cart {
+  display: flex;
+  gap: 10px;
+  width: 60%;
+  padding: 9px 13px;
+}
+.cartIcon {
+  width: 30px;
+}
+.cartText {
+  color: white;
+  align-self: center;
+  font-weight: 500;
+  font-size: 13px;
+}
+.cartMiddle {
+  width: 20%;
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
+  border-right: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 9px 13px;
+}
+.forwardBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 9px 13px;
+}
+.forwardIcon {
+  width: 25px;
+}
+
+/* nav-bottom */
+.navBottom {
+  width: 90vw;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  align-items: center;
+}
+.logo {
+  width: 139px;
+  height: 37px;
+}
+.links {
+  display: flex;
+  gap: 60px;
+  align-items: center;
+}
+.link {
+  font-size: 15px;
+  cursor: pointer;
+  color: #000000;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+.linkActive {
+  text-decoration: none;
+  color: white;
+  font-size: 15px;
+  background: #fc8a06;
+  padding: 8px 22px;
+  border-radius: 120px;
+}
+.link:hover {
+  color: #fc8a06;
+}
+.button {
+  display: flex;
+  background: #03081f;
+  border-radius: 120px;
+  padding: 9px 12px;
+  gap: 6px;
+}
+.buttonText {
+  color: white;
+  font-size: 13px;
+  align-self: center;
+}
+.avater {
+  width: 26px;
+}
+
+/* media query */
+@media (max-width: 1250px) {
+  .cartContainer {
+    width: 164px;
+  }
+  .cart {
+    padding: 0px 11px;
+    gap: 6px;
+  }
+  .cartMiddle,
+  .forwardBox {
+    padding: 0px 11px;
+  }
+  .cartIcon {
+    width: 17px;
+    height: 22px;
+    align-self: center;
+  }
+  .cartText {
+    font-size: 10px;
+  }
+  .forwardIcon {
+    width: 17px;
+  }
+  .logo {
+    width: 89px;
+    height: 31px;
+  }
+  .links {
+    gap: 35px;
+  }
+  .linkActive {
+    padding: 6px 15px;
+    font-size: 12px;
+  }
+  .link {
+    font-size: 12px;
+  }
+  .button {
+    padding: 8px 10px;
+    gap: 3px;
+  }
+  .avater {
+    width: 20px;
+  }
+  .buttonText {
+    font-size: 10px;
+  }
+  .star,
+  .offerText,
+  .locationText,
+  .locationLink {
+    font-size: 10px;
+  }
+  .locationIcon {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+@media (max-width: 880px) {
+  .logo {
+    width: 64px;
+    height: 23px;
+  }
+  .linkActive {
+    padding: 4px 10px;
+    font-size: 10px;
+  }
+  .link {
+    font-size: 10px;
+  }
+  .links {
+    gap: 25px;
+  }
+  .avater {
+    width: 17px;
+  }
+  .buttonText {
+    font-size: 9px;
+  }
+  .star,
+  .offerText,
+  .locationText,
+  .locationLink {
+    font-size: 7px;
+  }
+  .cartContainer {
+    width: 139px;
+  }
+  .cartIcon {
+    width: 12px;
+    height: 18px;
+  }
+  .cartText {
+    font-size: 8px;
+  }
+  .forwardIcon {
+    width: 13px;
+  }
+}
+
+@media (max-width: 670px) {
+  .nav {
+    display: none;
+  }
+  .smallLocation {
+    display: flex;
+  }
+  .navSmall {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+  .smallLogoBox {
+    width: calc(80% - 26px);
+    display: flex;
+
+    align-items: center;
+
+    margin-left: 26px;
+  }
+  .smallLogo {
+    width: 150px;
+  }
+  .menueBox {
+    width: 20%;
+
+    display: flex;
+    align-items: center;
+  }
+  .smallMenueIcon {
+    width: 50px;
+  }
+  .profileBox {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fc8a06;
+    height: 65px;
+    gap: 12px;
+    font-weight: 500;
+    margin-top: 16px;
+  }
+  .smallCartBox {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #028643;
+    height: 65px;
+    gap: 15px;
+    font-weight: 500;
+    margin-top: 16px;
+    color: white;
+  }
+  .smallLocation {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    margin: 20px;
+    margin: 20px 0px;
+  }
+  .smallLocationText {
+    margin-right: 21px;
+  }
+}

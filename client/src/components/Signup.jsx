@@ -6,8 +6,11 @@ import style from "../css/auth.module.css";
 import { Link } from "react-router-dom";
 import postRequest from "../utility/postRequest";
 import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
 
 function Signup() {
+  const navigate = useNavigate();
+
   const [data, setData] = useState({
     name: "",
     phone: "",
@@ -27,6 +30,7 @@ function Signup() {
         position: "top-right",
         autoClose: 3000,
       });
+      navigate("/login");
       setIsPending(false);
     } else {
       setIsPending(false);

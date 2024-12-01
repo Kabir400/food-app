@@ -1,0 +1,191 @@
+.cart {
+  width: 303px;
+  border: 1px solid #0000001c;
+  border-radius: 8px 8px 0px 0px;
+  /* height: 600px; */
+}
+
+.share {
+  width: 100%;
+  margin-bottom: 6px;
+  height: 87px;
+}
+
+.cartTop {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  padding: 14px 20px 14px 0;
+  background: #028643;
+  justify-content: center;
+  border: 1px solid #0000001c;
+  border-radius: 8px 8px 0px 0px;
+}
+.cartText {
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+}
+.cartItemContainer {
+  margin-top: 11px;
+}
+.cartItem {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 12px;
+}
+.itemQty {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fc8a06;
+  color: white;
+
+  border-radius: 50%;
+  font-weight: 700;
+  width: 42px;
+  height: 42px;
+}
+.cartItemRemove {
+  width: 26px;
+  height: 27px;
+}
+.cartItemPrice {
+  color: #028643;
+}
+.cartItemName {
+  font-weight: 500;
+}
+.cartItemTopincs {
+  font-size: 14px;
+}
+
+.cartCaculation {
+  margin-top: 20px;
+  padding: 20px 15px 10px 15px;
+  border: 1px solid #00000033;
+}
+.subTotal,
+.discount,
+.delivaryFee {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 13px;
+}
+
+.subTotalText,
+.discountText,
+.delivaryFeeText {
+  font-weight: 500;
+}
+
+.totalPay {
+  display: flex;
+  width: 90%;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding: 16px;
+  background: #fc8a06cc;
+  margin: auto;
+  margin-top: 19px;
+  border-radius: 8px;
+}
+.totalPayText {
+  color: white;
+  font-weight: 500;
+}
+.toalValue {
+  font-size: 21px;
+  color: white;
+  font-weight: 600;
+}
+
+.freeItem,
+.couponCode {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  border: 1px solid #cfcfcf;
+  margin: auto;
+  margin-top: 19px;
+  padding: 10px 16px;
+  background-color: #f6f6f6;
+  border-radius: 120px;
+  align-items: center;
+}
+.couponCodeText,
+.freeItemText {
+  font-size: 14px;
+}
+.freeItemArrow,
+.couponCodeArrow {
+  width: 23px;
+}
+.couponCode {
+  margin-bottom: 30px;
+}
+
+.deliveryContainer {
+  display: flex;
+  gap: 14px;
+  justify-content: space-between;
+  padding: 22px;
+  border-top: 1px solid #00000033;
+}
+
+.delivery {
+  background: #eeeeee;
+  border: 1px solid #00000033;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 11px;
+}
+.deliveryHeading,
+.collectionHeading {
+  font-weight: 500;
+}
+.deliveryTime,
+.collectionTime {
+  font-size: 14px;
+}
+
+.collection {
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  border-left: 1px solid #00000033;
+  padding: 11px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.checkoutBox {
+  background: #028643;
+  width: 90%;
+  margin: auto;
+  padding: 14px 20px;
+  border: 1px solid #0000001c;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.checkoutText {
+  color: white;
+  margin-left: 18%;
+  font-weight: 600;
+  font-size: 17px;
+}
+.checkoutIcon {
+  width: 30px;
+}
+
+@media (max-width: 1300px) {
+  .cart {
+    display: none;
+  }
+}
