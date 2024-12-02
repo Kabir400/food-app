@@ -24,6 +24,7 @@ function Login() {
         position: "top-right",
         autoClose: 3000,
       });
+      localStorage.removeItem("cart");
       navigate("/");
       setIsPending(false);
     } else {

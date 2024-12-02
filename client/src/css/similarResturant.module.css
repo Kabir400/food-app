@@ -1,0 +1,83 @@
+.container {
+  width: 90vw;
+  margin: auto;
+}
+
+.resturantContainerTop {
+  margin-top: 33px;
+}
+.resturantText {
+  margin-bottom: 33px;
+}
+.resturantContainer {
+  display: flex;
+  gap: 16px;
+  overflow: auto;
+  white-space: nowrap;
+  flex-wrap: nowrap;
+  margin-bottom: 20px;
+}
+.resturantBox {
+  border: 1px solid #0000001a;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+
+  width: 208px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.resturantBox:hover {
+  transform: scale(1.05);
+}
+
+.resturantImg {
+  width: 100%;
+}
+
+.resturantBottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 14px 15px;
+  background-color: #fc8a06;
+  color: white;
+  font-weight: 600;
+  border-radius: 0px 0px 12px 12px;
+}
+
+@media (max-width: 950px) {
+  .resturantText {
+    font-size: 12px;
+  }
+  .resturantBox {
+    width: 160px;
+  }
+  .resturantBottom {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 670px) {
+  .container {
+    order: 1;
+  }
+  .resturantContainer {
+    overflow: visible;
+    flex-wrap: wrap;
+  }
+  .resturantBox {
+    width: calc(50% - 16px);
+  }
+  .resturantText {
+    font-size: 19px;
+  }
+}
+
+@media (max-width: 380px) {
+  .resturantText {
+    font-size: 18px;
+  }
+}

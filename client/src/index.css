@@ -27,8 +27,34 @@
   display: none;
 }
 
+.leaflet-container {
+  height: 400px !important;
+}
+
 @media (max-width: 1300px) {
   .cartPopupContainer {
     display: flex;
+  }
+}
+
+@media (max-width: 1250px) {
+  .bannerStar {
+    font-size: 16px !important;
+  }
+}
+
+@media (max-width: 1040px) {
+  .bannerStar {
+    font-size: 11px !important;
+  }
+}
+@media (max-width: 670px) {
+  .bannerStar {
+    font-size: 17px !important;
+  }
+}
+@media (max-width: 530px) {
+  .bannerStar {
+    font-size: 10px !important;
   }
 }

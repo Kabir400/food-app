@@ -1,5 +1,7 @@
-import React from "react";
 import style from "../css/Cart.module.css";
+import { cartContext } from "../pages/Store";
+import { useContext } from "react";
+import { toast } from "react-toastify";
 
 //img
 import share from "../assets/share.png";
@@ -10,8 +12,32 @@ import bottomArrow from "../assets/bottom-arrow.png";
 import scoter from "../assets/scoter.png";
 import store from "../assets/store.png";
 import checkout from "../assets/checkout-arrow.png";
+import error from "../assets/Error.png";
 
 function Cart() {
+  const { state, removeFromCart } = useContext(cartContext);
+
+  //current time for the popup
+  const currentTime = new Date();
+  const currentHour = currentTime.getHours();
+
+  // Check if the current time is between 3 PM (15) and 11:59 PM (23)
+  const isWithinTimeRange = currentHour >= 15 && currentHour <= 23;
+
+  const subTotal = state.cart.reduce(
+    (total, item) => total + item.price * item.quantity,
+    0
+  );
+  const discount = subTotal > 200 ? 20 : 0; //Discount of ₹20 for orders above ₹200
+
+  const removeHandler = (id) => {
+    removeFromCart(id);
+    toast.error("Item removed", {
+      position: "top-right",
+      autoClose: 3000,
+    });
+  };
+
   return (
     <div>
       <div className={style.cart}>
@@ -24,47 +50,46 @@ function Cart() {
           </div>
           {/* cart item container */}
           <div className={style.cartItemContainer}>
-            <div className={style.cartItem}>
-              <div className={style.itemQty}>1X</div>
-              <div className={style.cartItemTextBox}>
-                <p className={style.cartItemPrice}>₹120</p>
-                <p className={style.cartItemName}>Product Name</p>
-                <p className={style.cartItemTopincs}>With extra fries</p>
+            {state.cart.map((item) => (
+              <div className={style.cartItem} key={item._id}>
+                <div className={style.itemQty}>{item.quantity}X</div>
+                <div className={style.cartItemTextBox}>
+                  <p className={style.cartItemPrice}>
+                    ₹{item.price * item.quantity}
+                  </p>
+                  <p className={style.cartItemName}>{item.title}</p>
+                  <p className={style.cartItemTopincs}>{item.toppings}</p>
+                </div>
+                <img
+                  src={remove}
+                  className={style.cartItemRemove}
+                  onClick={() => removeHandler(item._id)}
+                  alt="Remove"
+                />
               </div>
-              <img src={remove} className={style.cartItemRemove} />
-            </div>
-            {/* item2 */}
-            <div className={style.cartItem}>
-              <div className={style.itemQty}>1X</div>
-              <div className={style.cartItemTextBox}>
-                <p className={style.cartItemPrice}>₹120</p>
-                <p className={style.cartItemName}>Product Name</p>
-                <p className={style.cartItemTopincs}>With extra fries</p>
-              </div>
-              <img src={remove} className={style.cartItemRemove} />
-            </div>
+            ))}
           </div>
 
           {/* calulations */}
           <div className={style.cartCaculation}>
             <div className={style.subTotal}>
               <p className={style.subTotalText}>Sub Total:</p>
-              <p className={style.subTotalValue}>₹230.00</p>
+              <p className={style.subTotalValue}>₹{subTotal}</p>
             </div>
             <div className={style.discount}>
               <p className={style.discountText}>Discounts:</p>
-              <p className={style.discountValue}>-₹20.00</p>
+              <p className={style.discountValue}>-₹{discount}</p>
             </div>
             <div className={style.delivaryFee}>
               <p className={style.delivaryFeeText}>Delivary Fee:</p>
-              <p className={style.delivaryFeeValue}>₹20.00</p>
+              <p className={style.delivaryFeeValue}>₹{0.0}</p>
             </div>
           </div>
 
           {/* total and freebies */}
           <div className={style.totalPay}>
             <p className={style.totalPayText}>Total to pay:</p>
-            <p className={style.toalValue}>₹230.00</p>
+            <p className={style.toalValue}>₹{subTotal - discount}</p>
           </div>
 
           <div className={style.freeItem}>
@@ -92,11 +117,41 @@ function Cart() {
           </div>
 
           {/* checkoutBox */}
-          <div className={style.checkoutBox}>
+          <div
+            className={`${style.checkoutBox} ${
+              subTotal - discount < 200 ? style.disabled : ""
+            }`}
+          >
             <img src={checkout} className={style.checkoutIcon} />
             <p className={style.checkoutText}>Checkout!</p>
           </div>
         </div>
+
+        {/* warning */}
+
+        {subTotal - discount < 200 && (
+          <div className={style.warningContainer}>
+            <img src={error} className={style.warningIcon} />
+            <div className={style.warningText}>
+              Minimum delivery is ₹200, You must Spend{" "}
+              <span className={style.warningSpan}>
+                ₹{200 - (subTotal - discount)} more
+              </span>{" "}
+              for the checkout!
+            </div>
+          </div>
+        )}
+
+        {subTotal - discount >= 200 && !isWithinTimeRange && (
+          <div className={style.warningContainer}>
+            <img src={error} className={style.warningIcon} />
+            <div className={style.warningText}>
+              We are open now, but delivery starts at
+              <span className={style.warningSpan}>18:00</span>however you may
+              order and collect in store now
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );

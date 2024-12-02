@@ -7,6 +7,12 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  img: {
+    type: String,
+    required: true,
+    default:
+      "https://res.cloudinary.com/dv4re7bf8/image/upload/v1733056965/avater_woga44.png",
+  },
   email: {
     type: String,
     unique: true,

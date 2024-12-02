@@ -1,0 +1,89 @@
+.searchContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 90vw;
+  margin: auto;
+  padding: 20px 30px;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.searchBox {
+  width: 200px;
+  position: relative;
+}
+.searchInput {
+  width: 100%;
+  padding: 7px 7px 7px 32px;
+  border-radius: 120px;
+  outline: none;
+  border: 1px solid #03081f;
+  color: #03081f;
+  font-size: 12px;
+}
+.searchIcon {
+  position: absolute;
+  top: 9px;
+  left: 7px;
+  width: 20px;
+}
+.searchText {
+  font-size: 18px;
+}
+
+.sortContainer {
+  background-color: #fc8a06;
+  padding: 21px 21px 21px 94px;
+  display: flex;
+  gap: 45px;
+  color: white;
+  overflow: auto;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  align-items: center;
+}
+
+.sortLink {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.active {
+  border: 1.33px solid #000000;
+  background: #03081f;
+  border-radius: 120px;
+  padding: 1px 11px;
+}
+
+@media (max-width: 1300px) {
+  .sortLink {
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 15px;
+  }
+  .sortContainer {
+    gap: 40px;
+  }
+}
+
+@media (max-width: 770px) {
+  .searchText {
+    font-size: 15px;
+  }
+  .searchBox {
+    width: 182px;
+  }
+  .sortLink {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 670px) {
+  .searchContainer {
+    display: none;
+  }
+  .sortContainer {
+    padding: 21px 21px 21px 44px;
+    gap: 30px;
+  }
+}

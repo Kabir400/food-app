@@ -1,0 +1,78 @@
+.container {
+  width: 90vw;
+  margin: auto;
+  position: relative;
+}
+
+.mapBox {
+  position: absolute;
+  background: #03081ff7;
+  border-radius: 12px;
+  z-index: 1000;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  color: white;
+  top: 40px;
+  left: 79px;
+}
+
+.mapBoxdiv {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.mapBoxHeading {
+  font-size: 26px;
+}
+.mapBoxCountry {
+  color: #fc8a06;
+  font-weight: 600;
+}
+.mapBoxAddress {
+  font-size: 12px;
+}
+.phone,
+.website {
+  font-size: 12px;
+}
+
+@media (max-width: 950px) {
+  .mapBoxHeading {
+    font-size: 22px;
+  }
+  .mapBoxCountry {
+    font-size: 13px;
+  }
+  .mapBoxAddress {
+    font-size: 10px;
+  }
+  .phone,
+  .website {
+    font-size: 10px;
+  }
+  .phoneText,
+  .websiteText {
+    font-size: 13px;
+  }
+  .mapBox {
+    padding: 20px;
+    top: 77px;
+    left: 32px;
+  }
+}
+
+@media (max-width: 650px) {
+  .mapBox {
+    top: 37%;
+    left: 4%;
+    width: 90%;
+    margin: auto;
+  }
+}
+
+@media (max-width: 670px) {
+  .container {
+    order: 3;
+  }
+}

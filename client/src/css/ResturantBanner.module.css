@@ -1,0 +1,337 @@
+.container {
+  display: flex;
+  width: 90vw;
+  margin: auto;
+  background-image: url("../assets/ResturantBannerImg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  justify-content: space-between;
+  border-radius: 12px;
+  margin-bottom: 35px;
+  position: relative;
+  padding: 30px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #03081fe5;
+  border-radius: 12px;
+  z-index: 0;
+}
+
+.bannerLeft {
+  position: relative;
+  z-index: 1;
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.bannerLeftText {
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.bannerLeftHeading {
+  font-size: 31px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.bannerLeftButtons {
+  display: flex;
+  gap: 10px;
+}
+
+.bannerLeftBtn {
+  display: flex;
+  align-items: center;
+
+  padding: 9px 24px;
+  border-radius: 120px;
+  border: 1px solid white;
+  gap: 7px;
+}
+
+.bannerBtnText {
+  color: white;
+  font-size: 13px;
+}
+.bannerBtnImg {
+  width: 26px;
+}
+
+.bannerRight {
+  z-index: 1;
+  width: 453px;
+  position: relative;
+}
+
+.ratingContainer {
+  position: absolute;
+  z-index: 1999;
+  background: white;
+  padding: 5px 19px;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  left: -65px;
+  bottom: 4px;
+  border-radius: 12px;
+  align-items: center;
+}
+.bannerRightImg {
+  width: 100%;
+}
+.rating {
+  font-size: 44px;
+}
+.noOfReviews {
+  font-size: 14px;
+}
+
+.bannerBottom {
+  position: absolute;
+  bottom: -23px;
+  left: 0;
+  z-index: 1111;
+  padding: 10px 24px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  background-color: #fc8a06;
+  color: white;
+  border-radius: 12px;
+  align-items: center;
+}
+.clock {
+  width: 20px;
+  height: 20px;
+}
+
+@media (max-width: 1250px) {
+  .bannerRight {
+    width: 348px;
+  }
+  .bannerLeftHeading {
+    font-size: 27px;
+  }
+  .bannerLeftText {
+    font-size: 13px;
+  }
+  .bannerBtnImg {
+    width: 18px;
+  }
+  .bannerBtnText {
+    font-size: 10px;
+  }
+  .rating {
+    font-size: 29px;
+  }
+  .noOfReviews {
+    font-size: 12px;
+  }
+  .ratingContainer {
+    padding: 5px 18px;
+  }
+  .clock {
+    width: 15px;
+    height: 15px;
+  }
+  .bannerBottomText {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 1040px) {
+  .bannerRight {
+    width: 273px;
+  }
+  .bannerLeftHeading {
+    font-size: 23px;
+  }
+  .bannerLeftText {
+    font-size: 11px;
+  }
+  .bannerBtnImg {
+    width: 11px;
+  }
+  .bannerBtnText {
+    font-size: 7px;
+  }
+  .rating {
+    font-size: 23px;
+  }
+  .noOfReviews {
+    font-size: 10px;
+  }
+  .ratingContainer {
+    padding: 5px 18px;
+  }
+  .clock {
+    width: 13px;
+    height: 13px;
+  }
+  .bannerBottomText {
+    font-size: 11px;
+  }
+  .ratingContainer {
+    padding: 3px 13px;
+    left: -38px;
+  }
+}
+
+@media (max-width: 810px) {
+  .bannerRight {
+    width: 211px;
+  }
+  .bannerLeftHeading {
+    font-size: 21px;
+  }
+  .bannerLeftText {
+    font-size: 10px;
+  }
+
+  .bannerLeftBtn {
+    padding: 7px 12px;
+  }
+
+  .rating {
+    font-size: 18px;
+  }
+  .noOfReviews {
+    font-size: 9px;
+  }
+  .ratingContainer {
+    padding: 5px 18px;
+  }
+  .clock {
+    width: 11px;
+    height: 11px;
+  }
+  .bannerBottomText {
+    font-size: 9px;
+  }
+  .ratingContainer {
+    padding: 3px 13px;
+    left: -38px;
+  }
+}
+
+@media (max-width: 670px) {
+  .container {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .bannerLeft {
+    width: 90%;
+    margin: auto;
+    order: 2;
+  }
+  .bannerRight {
+    width: 80%;
+    margin: auto;
+    order: 1;
+  }
+  .bannerLeftHeading {
+    font-size: 27px;
+  }
+  .bannerLeftBtn {
+    padding: 5px 18px;
+  }
+  .bannerLeftText {
+    font-size: 13px;
+  }
+  .bannerBtnImg {
+    width: 20px;
+  }
+  .bannerBtnText {
+    font-size: 10px;
+  }
+  .rating {
+    font-size: 31px;
+  }
+  .noOfReviews {
+    font-size: 12px;
+  }
+  .ratingContainer {
+    padding: 3px 13px;
+  }
+  .bannerBottom {
+    display: none;
+  }
+}
+
+@media (max-width: 530px) {
+  .bannerRight {
+    width: 100%;
+  }
+  .rating {
+    font-size: 23px;
+  }
+  .noOfReviews {
+    font-size: 10px;
+  }
+  .bannerLeftHeading {
+    font-size: 25px;
+  }
+  .bannerLeftText {
+    font-size: 13px;
+  }
+  .bannerBtnText {
+    font-size: 12px;
+  }
+  .bannerBtnImg {
+    width: 17px;
+  }
+  .bannerLeftBtn {
+    padding: 3px 13px;
+  }
+  .ratingContainer {
+    left: 9px;
+    bottom: -31px;
+    padding: 6px 8px;
+  }
+  .container {
+    gap: 35px;
+    padding: 16px;
+  }
+  .bannerLeft {
+    width: 100%;
+  }
+  .bannerLeftButtons {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .bannerLeftBtn {
+    padding: 14px 17px;
+    width: 100%;
+    justify-content: center;
+    gap: 15px;
+  }
+}
+@media (max-width: 425px) {
+  .bannerLeftHeading {
+    font-size: 18px;
+  }
+  .bannerLeftText {
+    font-size: 11px;
+  }
+  .bannerBtnText {
+    font-size: 10px;
+  }
+  .bannerBtnImg {
+    width: 14px;
+  }
+  .bannerLeftBtn {
+    padding: 11px 5px;
+    width: 92%;
+    align-self: center;
+  }
+}

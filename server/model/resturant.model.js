@@ -21,6 +21,14 @@ const resturantSchema = new mongoose.Schema({
   location: {
     latetude: { type: Number, required: true },
     longitude: { type: Number, required: true },
+    address: {
+      type: String,
+      required: true,
+    },
+    country: {
+      type: String,
+      required: true,
+    },
   },
 });
 

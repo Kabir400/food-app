@@ -101,7 +101,7 @@ function Nav() {
           <img src={avater2} className={style.smallProfileIcon} />
           <p className={style.smallProfileText}>Hey Mike</p>
         </div>
-        <div className={style.smallCartBox}>
+        <div className={style.smallCartBox} onClick={cartHandler}>
           <img src={cart2} className={style.smallCartIcon} />
           <p className={style.smallCartText}>My Cart</p>
         </div>

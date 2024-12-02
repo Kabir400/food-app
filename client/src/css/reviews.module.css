@@ -1,0 +1,401 @@
+.container {
+  background: #d9d9d9;
+  position: relative;
+  margin-bottom: 50px;
+}
+.carousel {
+  width: 90vw;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  position: relative;
+  overflow: hidden;
+  padding: 50px 0px;
+}
+.reviewHeading {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.slider {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.reviewCard {
+  min-width: calc(90% / 3); /* 3 items visible at a time */
+  border-radius: 4px;
+  padding: 15px;
+  margin: 0 10px;
+  background: #fff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.headerLeft {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.avater {
+  width: 46px;
+  height: 40px;
+}
+.headerRight {
+  display: flex;
+  flex-direction: column;
+}
+.headerRightTimeContainer {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+.starContainer {
+  align-self: flex-end;
+}
+.reviewName {
+  font-size: 14px;
+}
+.reviewLocation {
+  font-size: 14px;
+}
+.reviewClock {
+  width: 20px;
+}
+.reviewTimeText {
+  font-size: 11px;
+}
+.reviewText {
+  font-size: 13px;
+}
+.headerLeftTextContainer {
+  padding-left: 10px;
+  border-left: 2px solid #fc8a06;
+}
+
+/* controlls */
+.controls {
+  position: absolute;
+  top: 51px;
+  right: 57px;
+  display: flex;
+  gap: 10px;
+}
+.controlBtn {
+  background-color: #fc8a06;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  font-size: 20px;
+  width: 40px;
+  height: 40px;
+}
+
+.ratingContainer {
+  position: absolute;
+  bottom: -86px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  padding: 10px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+}
+
+.rating {
+  font-size: 42px;
+  font-weight: 400;
+  text-align: center;
+}
+.ratingContainerReview {
+  font-size: 13px;
+  text-align: center;
+}
+.ratingContainerBottom {
+  margin-top: -11px;
+}
+
+@media (max-width: 1300px) {
+  .avater {
+    width: 35px;
+    height: 29px;
+  }
+  .reviewCard {
+    padding: 12px;
+  }
+  .reviewName {
+    font-size: 13px;
+  }
+  .reviewLocation {
+    font-size: 11px;
+  }
+  .reviewTimeText {
+    font-size: 9px;
+  }
+  .reviewClock {
+    width: 13px;
+  }
+  .reviewText {
+    font-size: 12px;
+  }
+  .reviewHeading {
+    font-size: 22px;
+  }
+  .controlBtn {
+    width: 36px;
+    height: 36px;
+  }
+  .rating {
+    font-size: 34px;
+  }
+  .ratingContainerReview {
+    font-size: 11px;
+  }
+  .ratingContainer {
+    bottom: -65px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .avater {
+    width: 31px;
+    height: 25px;
+  }
+  .reviewCard {
+    padding: 12px;
+  }
+  .reviewName {
+    font-size: 11px;
+  }
+  .reviewLocation {
+    font-size: 8px;
+  }
+  .reviewTimeText {
+    font-size: 7px;
+  }
+  .reviewClock {
+    width: 11px;
+  }
+  .reviewText {
+    font-size: 9px;
+  }
+  .reviewHeading {
+    font-size: 20px;
+  }
+  .controlBtn {
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+  }
+  .rating {
+    font-size: 29px;
+  }
+  .ratingContainerReview {
+    font-size: 10px;
+  }
+  .ratingContainer {
+    bottom: -62px;
+  }
+}
+
+@media (max-width: 1010px) {
+  .slider {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 900px) {
+  .reviewCard {
+    min-width: calc(90% / 2);
+  }
+
+  .avater {
+    width: 35px;
+    height: 29px;
+  }
+  .reviewCard {
+    padding: 12px;
+  }
+  .reviewName {
+    font-size: 13px;
+  }
+  .reviewLocation {
+    font-size: 11px;
+  }
+  .reviewTimeText {
+    font-size: 9px;
+  }
+  .reviewClock {
+    width: 13px;
+  }
+  .reviewText {
+    font-size: 12px;
+  }
+  .reviewHeading {
+    font-size: 22px;
+  }
+  .controlBtn {
+    width: 36px;
+    height: 36px;
+  }
+  .rating {
+    font-size: 34px;
+  }
+  .ratingContainerReview {
+    font-size: 11px;
+  }
+  .ratingContainer {
+    bottom: -65px;
+  }
+}
+
+@media (max-width: 800) {
+  .avater {
+    width: 31px;
+    height: 25px;
+  }
+  .reviewCard {
+    padding: 12px;
+  }
+  .reviewName {
+    font-size: 11px;
+  }
+  .reviewLocation {
+    font-size: 8px;
+  }
+  .reviewTimeText {
+    font-size: 7px;
+  }
+  .reviewClock {
+    width: 11px;
+  }
+  .reviewText {
+    font-size: 9px;
+  }
+  .reviewHeading {
+    font-size: 20px;
+  }
+  .controlBtn {
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+  }
+  .rating {
+    font-size: 29px;
+  }
+  .ratingContainerReview {
+    font-size: 10px;
+  }
+  .ratingContainer {
+    bottom: -62px;
+  }
+}
+
+@media (max-width: 670px) {
+  .container {
+    order: 2;
+  }
+  .carousel {
+    padding-bottom: 70px;
+  }
+  .slider {
+    gap: 0;
+  }
+  .reviewCard {
+    min-width: 100%;
+    padding: 20px 30px;
+  }
+
+  .avater {
+    width: 54px;
+    height: 44px;
+  }
+
+  .reviewName {
+    font-size: 22px;
+  }
+  .reviewLocation {
+    font-size: 15px;
+  }
+  .reviewTimeText {
+    font-size: 13px;
+  }
+  .reviewClock {
+    width: 16px;
+  }
+  .reviewText {
+    font-size: 14px;
+  }
+  .reviewHeading {
+    font-size: 23px;
+  }
+  .controls {
+    top: 85%;
+    right: 50%;
+    transform: translate(50%);
+  }
+  .controlBtn {
+    top: 87%;
+    right: 50%;
+  }
+  .rating {
+    font-size: 34px;
+  }
+  .ratingContainerReview {
+    font-size: 11px;
+  }
+  .ratingContainer {
+    bottom: 80%;
+    left: 84%;
+  }
+}
+
+@media (max-width: 470px) {
+  .reviewHeading {
+    font-size: 20px;
+  }
+  .avater {
+    width: 46px;
+    height: 39px;
+  }
+  .reviewCard {
+    padding: 15px;
+  }
+  .reviewName {
+    font-size: 16px;
+  }
+  .reviewLocation {
+    font-size: 12px;
+  }
+  .reviewTimeText {
+    font-size: 9px;
+  }
+  .reviewClock {
+    width: 13px;
+  }
+  .reviewText {
+    font-size: 10px;
+  }
+  .rating {
+    font-size: 25px;
+  }
+  .ratingContainerReview {
+    font-size: 8px;
+  }
+  .ratingContainer {
+    bottom: 86%;
+  }
+}

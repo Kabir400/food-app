@@ -1,0 +1,6 @@
+.resturantBottom {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  margin-bottom: 60px;
+}

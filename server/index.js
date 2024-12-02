@@ -33,6 +33,8 @@ app.use(cookieParser());
 //routes
 app.use("/api/v1", require("./router/user.router.js"));
 app.use("/api/v1", require("./router/resturant.router.js"));
+app.use("/api/v1", require("./router/food.router.js"));
+app.use("/api/v1", require("./router/review.router.js"));
 
 //defalut error handler middleware
 app.use((err, req, res, next) => {

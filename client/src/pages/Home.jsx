@@ -15,6 +15,7 @@ import postRequest from "../utility/postRequest.js";
 import getRequest from "../utility/getRequest.js";
 import { useContext, useState, useEffect } from "react";
 import { context } from "../pages/Store.jsx";
+import { toast } from "react-toastify";
 
 function Home() {
   const [isLoding, setIsLoading] = useState(false);
@@ -22,16 +23,18 @@ function Home() {
 
   // checkLogin status
   const fetchLoginStatus = async () => {
-    const result = await postRequest(`${base_url}/checklogin`);
-    if (result.status === 401) {
-      setData((prev) => ({ ...prev, isLogin: false, loginChecked: true }));
-    } else if (result.suceess) {
-      setData((prev) => ({
-        ...prev,
-        isLogin: true,
-        user: result.data,
-        loginChecked: true,
-      }));
+    if (!data.loginChecked) {
+      const result = await postRequest(`${base_url}/checklogin`);
+      if (result.status === 401) {
+        setData((prev) => ({ ...prev, isLogin: false, loginChecked: true }));
+      } else if (result.suceess) {
+        setData((prev) => ({
+          ...prev,
+          isLogin: true,
+          user: result.data,
+          loginChecked: true,
+        }));
+      }
     }
   };
 
