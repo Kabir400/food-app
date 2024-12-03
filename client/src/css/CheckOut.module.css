@@ -1,0 +1,272 @@
+.container {
+  width: 90vw;
+  margin: auto;
+  margin-top: 40px;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+.header {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.leftArrow {
+  width: 25px;
+}
+.heading {
+  font-weight: 600;
+  font-size: 21px;
+}
+
+.body {
+  display: flex;
+  gap: 20px;
+}
+
+.foodImg {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+}
+.bodyLeft {
+  width: calc(65% - 10px);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  border: 1px solid #03081f;
+  border-radius: 12px;
+}
+.bodyLeftTop {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: 390px;
+  overflow: auto;
+}
+.foodItem {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0px;
+  border-bottom: 1px solid #202938;
+}
+
+.foodItemBox {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+.foodDetails {
+  display: flex;
+  flex-direction: column;
+}
+.foodName {
+  font-weight: 600;
+}
+.qty {
+  color: #83858a;
+  font-size: 13px;
+}
+.foodPrice {
+  color: #028643;
+  font-weight: 500;
+}
+
+.bodyLeftTop .foodItem:last-child {
+  border-bottom: none;
+}
+
+.bodyLeftBottom {
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+}
+.notes {
+  color: #83858a;
+}
+
+.notesInput {
+  width: 100%;
+  padding: 10px 20px;
+  border-radius: 120px;
+  border: 1px solid #202938;
+  color: #83858a;
+}
+
+.notesInput:focus {
+  outline: none;
+}
+/* body right */
+.bodyRight {
+  width: calc(35% - 10px);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.deliveryAddress {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #03081f;
+  border-radius: 120px;
+}
+.deliveryAddressLeft {
+  display: flex;
+  gap: 1px;
+  align-items: center;
+  height: 67px;
+}
+.deliveryDetails {
+  display: flex;
+  flex-direction: column;
+}
+.deliveryAddressTitle {
+  font-size: 15px;
+}
+.deliveryAddressText {
+  font-size: 13px;
+}
+.deliveryAddressIcon {
+  width: 59px;
+  margin-top: 13px;
+}
+.deliveryNext {
+  width: 10px;
+  margin-right: 20px;
+}
+
+/* order summary */
+.orderSumary {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  border-top: 1px solid #202938;
+  border-bottom: 1px solid #202938;
+  padding: 14px 0px;
+}
+.orderItems,
+.orderTax {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tax,
+.taxPrice,
+.items,
+.itemPrice {
+  color: #83858a;
+}
+
+.subTotal {
+  display: flex;
+  justify-content: space-between;
+}
+
+.subTotalText {
+  color: #83858a;
+  font-size: 19px;
+}
+.subTotalPrice {
+  font-weight: 700;
+}
+
+.paymentBtn {
+  text-align: center;
+  margin-top: 15px;
+  background: #fc8a06;
+  color: #fff;
+  padding: 11px;
+  border-radius: 120px;
+  font-weight: 500;
+}
+.smallArrowLeft {
+  display: none;
+}
+
+@media (max-width: 1050px) {
+  .bodyLeft {
+    width: calc(55% - 10px);
+  }
+  .bodyRight {
+    width: calc(45% - 10px);
+  }
+}
+
+@media (max-width: 850px) {
+  .foodName {
+    font-size: 13px;
+  }
+  .qty {
+    font-size: 11px;
+  }
+  .foodImg {
+    width: 30px;
+    height: 30px;
+  }
+  .foodPrice {
+    font-size: 14px;
+  }
+  .notes {
+    font-size: 13px;
+  }
+  .notesInput {
+    font-size: 13px;
+  }
+  .heading {
+    font-size: 17px;
+  }
+  .leftArrow {
+    width: 20px;
+  }
+  .deliveryAddressTitle {
+    font-size: 13px;
+  }
+  .deliveryAddressText {
+    font-size: 11px;
+  }
+  .deliveryAddressIcon {
+    width: 55px;
+  }
+  .deliveryNext {
+    font-size: 8px;
+  }
+  .tax,
+  .taxPrice,
+  .items,
+  .itemPrice {
+    font-size: 13px;
+  }
+  .subTotalText {
+    font-size: 14px;
+  }
+  .subTotalPrice {
+    font-size: 14px;
+  }
+  .paymentBtn {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 670px) {
+  .body {
+    flex-direction: column;
+  }
+  .bodyLeft {
+    width: 100%;
+  }
+  .bodyRight {
+    width: 100%;
+  }
+  .leftArrow {
+    display: none;
+  }
+  .smallArrowLeft {
+    display: block;
+    width: 28px;
+  }
+}

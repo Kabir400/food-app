@@ -7,6 +7,8 @@ import Home from "./pages/Home";
 import Store from "./pages/Store";
 import Resturant from "./pages/Resturant";
 import Address from "./pages/Address";
+import CheckOut from "./pages/CheckOut";
+import Payment from "./pages/Payment";
 
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -29,6 +31,8 @@ function App() {
             <Route path="/signup" element={<Signup />} />
             <Route path="/resturant/:id" element={<Resturant />} />
             <Route path="/address" element={<Address />} />
+            <Route path="/checkout" element={<CheckOut />} />
+            <Route path="/payment" element={<Payment />} />
             <Route path="*" element={<Navigate to="/" />} />
           </Routes>
           <Footer />

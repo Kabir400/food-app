@@ -2,6 +2,7 @@ import { useContext, useEffect } from "react";
 import { context, cartContext } from "../pages/Store";
 import style from "../css/cartPopup.module.css";
 import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
 
 //img
 import share from "../assets/share.png";
@@ -16,6 +17,7 @@ import checkout from "../assets/checkout-arrow.png";
 function CartPopup() {
   const [data, setData] = useContext(context);
   const { state, removeFromCart } = useContext(cartContext);
+  const navigate = useNavigate();
 
   const subTotal = state.cart.reduce(
     (total, item) => total + item.price * item.quantity,
@@ -36,6 +38,12 @@ function CartPopup() {
       position: "top-right",
       autoClose: 3000,
     });
+  };
+
+  const checkoutHandler = () => {
+    if (subTotal >= 200) {
+      navigate("/checkout");
+    }
   };
 
   return (
@@ -123,6 +131,7 @@ function CartPopup() {
                 className={`${style.checkoutBox} ${
                   subTotal - discount < 200 ? style.disabled : ""
                 }`}
+                onClick={checkoutHandler}
               >
                 <img src={checkout} className={style.checkoutIcon} />
                 <p className={style.checkoutText}>Checkout!</p>

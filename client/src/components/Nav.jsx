@@ -15,7 +15,8 @@ import avater2 from "../assets/avater2.png";
 import cart2 from "../assets/cartSmall.png";
 
 function Nav() {
-  const [{ isLogin, user }, setValue] = useContext(context);
+  const [{ isLogin, user, slectedAddressIndex }, setValue] =
+    useContext(context);
 
   const cartHandler = () => {
     setValue((prev) => {
@@ -48,9 +49,12 @@ function Nav() {
               <img src={location} className={style.locationIcon} />
               <p className={style.locationText}>
                 {user?.address?.length > 0
-                  ? user?.address[0].fullAddress?.length > 25
-                    ? user?.address[0].fullAddress?.slice(0, 25) + "..."
-                    : user?.address[0].fullAddress
+                  ? user?.address[slectedAddressIndex].fullAddress?.length > 25
+                    ? user?.address[slectedAddressIndex].fullAddress?.slice(
+                        0,
+                        25
+                      ) + "..."
+                    : user?.address[slectedAddressIndex].fullAddress
                   : "No Address Added"}
               </p>
               <Link to="/address" className={style.locationLink}>

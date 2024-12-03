@@ -14,6 +14,8 @@ function Store({ children }) {
     searchQuery: "",
     selectedCategory: "",
     addressPoup: false,
+    slectedAddressIndex: 0,
+    addressList: [],
   });
 
   //cart funtionality.................................

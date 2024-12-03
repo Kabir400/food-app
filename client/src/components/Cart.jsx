@@ -2,6 +2,7 @@ import style from "../css/Cart.module.css";
 import { cartContext } from "../pages/Store";
 import { useContext } from "react";
 import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
 
 //img
 import share from "../assets/share.png";
@@ -16,6 +17,7 @@ import error from "../assets/Error.png";
 
 function Cart() {
   const { state, removeFromCart } = useContext(cartContext);
+  const navigate = useNavigate();
 
   //current time for the popup
   const currentTime = new Date();
@@ -36,6 +38,12 @@ function Cart() {
       position: "top-right",
       autoClose: 3000,
     });
+  };
+
+  const checkoutHandler = () => {
+    if (subTotal >= 200) {
+      navigate("/checkout");
+    }
   };
 
   return (
@@ -121,6 +129,7 @@ function Cart() {
             className={`${style.checkoutBox} ${
               subTotal - discount < 200 ? style.disabled : ""
             }`}
+            onClick={checkoutHandler}
           >
             <img src={checkout} className={style.checkoutIcon} />
             <p className={style.checkoutText}>Checkout!</p>

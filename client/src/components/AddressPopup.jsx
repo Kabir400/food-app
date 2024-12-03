@@ -1,20 +1,53 @@
-import React, { useContext, useState } from "react";
+//base url
+const base_url = import.meta.env.VITE_BASE_URL;
+
+import React, { useContext, useState, useEffect } from "react";
 
 import style from "../css/AddressPopup.module.css";
 import state from "../utility/stateArr";
 import { context } from "../pages/Store";
+import postRequest from "../utility/postRequest.js";
+import { toast } from "react-toastify";
+import Loader from "./Loader.jsx";
 
 //img
 import location from "../assets/adressPopupIcon.png";
 
 function AddressPopup() {
-  const [{ addressPopup }, setData] = useContext(context);
+  const [{ addressPopup, loginChecked }, setData] = useContext(context);
+  const [isLoading, setIsLoading] = useState(false);
+  const [isPending, setIsPending] = useState(false);
+
+  //fetch address
+  const fetchLoginStatus = async () => {
+    if (!loginChecked) {
+      const result = await postRequest(`${base_url}/checklogin`);
+      if (result.status === 401) {
+        setData((prev) => ({ ...prev, isLogin: false, loginChecked: true }));
+      } else if (result.suceess) {
+        setData((prev) => ({
+          ...prev,
+          isLogin: true,
+          user: result.data,
+          loginChecked: true,
+        }));
+      }
+    }
+  };
+
+  useEffect(() => {
+    setIsLoading(true);
+    (async () => {
+      await fetchLoginStatus();
+      setIsLoading(false);
+    })();
+  }, []);
 
   // Controlled state for form fields
   const [formData, setFormData] = useState({
-    selectedState: "",
+    state: "",
     city: "",
-    pinCode: "",
+    pincode: "",
     phoneNumber: "",
     fullAddress: "",
   });
@@ -32,6 +65,33 @@ function AddressPopup() {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
+  //................................
+
+  const addAddress = async () => {
+    setIsPending(true);
+    const result = await postRequest(`${base_url}/add/address`, formData);
+    if (result.status === 401) {
+      toast.error("You need to login to add address", {
+        position: "top-right",
+        autoClose: 3000,
+      });
+    } else if (result.suceess) {
+      setData((prev) => ({ ...prev, addressPopup: !prev.addressPopup }));
+      toast.success(result.message, { position: "top-right", autoClose: 3000 });
+      setData((prev) => ({
+        ...prev,
+        addressList: [...prev.addressList, result.data],
+      }));
+    } else if (result.suceess == false) {
+      toast.error(result.message, { position: "top-right", autoClose: 3000 });
+    }
+    setIsPending(false);
+  };
+
+  if (isLoading) {
+    return <Loader />;
+  }
+
   return (
     addressPopup && (
       <div className="popupOverlay" onClick={togglePopup}>
@@ -48,8 +108,8 @@ function AddressPopup() {
             {/* Controlled select for state */}
             <select
               className={style.select}
-              name="selectedState"
-              value={formData.selectedState}
+              name="state"
+              value={formData.state}
               onChange={handleChange}
             >
               <option value="" disabled>
@@ -72,10 +132,10 @@ function AddressPopup() {
             />
             <input
               type="text"
-              name="pinCode"
+              name="pincode"
               className={style.input}
               placeholder="Pin Code"
-              value={formData.pinCode}
+              value={formData.pincode}
               onChange={handleChange}
             />
             <input
@@ -99,7 +159,9 @@ function AddressPopup() {
             ></textarea>
           </div>
 
-          <div className={style.button}>Save</div>
+          <div className={style.button} onClick={addAddress}>
+            {isPending ? "Saving..." : "Save"}
+          </div>
         </div>
       </div>
     )
