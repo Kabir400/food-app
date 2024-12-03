@@ -6,7 +6,7 @@ import { context } from "../pages/Store";
 
 //img
 import location from "../assets/Location.png";
-import cart from "../assets/Cart.png";
+import cart from "../assets/cart.png";
 import forward from "../assets/Forward.png";
 import avater from "../assets/avater.png";
 import logo from "../assets/logo1.png";
