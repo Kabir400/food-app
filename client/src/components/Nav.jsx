@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 
 import style from "../css/nav.module.css";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { context } from "../pages/Store";
 
 //img
@@ -47,9 +47,15 @@ function Nav() {
             <div className={style.address}>
               <img src={location} className={style.locationIcon} />
               <p className={style.locationText}>
-                Regent Street, A4, A4201, London
+                {user?.address?.length > 0
+                  ? user?.address[0].fullAddress?.length > 25
+                    ? user?.address[0].fullAddress?.slice(0, 25) + "..."
+                    : user?.address[0].fullAddress
+                  : "No Address Added"}
               </p>
-              <p className={style.locationLink}>Change Location</p>
+              <Link to="/address" className={style.locationLink}>
+                Change Location
+              </Link>
             </div>
             {/* cart */}
             <div className={style.cartContainer} onClick={cartHandler}>
@@ -84,7 +90,11 @@ function Nav() {
             <div className={style.button}>
               <img src={avater} className={style.avater} />
               <p className={style.buttonText}>
-                {isLogin ? `Hey ${user.name.split(" ")[0]}` : "Login/Signup"}
+                {isLogin ? (
+                  `Hey ${user.name.split(" ")[0]}`
+                ) : (
+                  <Link to="/login"> Login/Signup</Link>
+                )}
               </p>
             </div>
           </div>
@@ -99,7 +109,13 @@ function Nav() {
         </div>
         <div className={style.profileBox}>
           <img src={avater2} className={style.smallProfileIcon} />
-          <p className={style.smallProfileText}>Hey Mike</p>
+          <p className={style.smallProfileText}>
+            {isLogin ? (
+              `Hey ${user.name.split(" ")[0]}`
+            ) : (
+              <Link to="/login"> Login/Signup</Link>
+            )}
+          </p>
         </div>
         <div className={style.smallCartBox} onClick={cartHandler}>
           <img src={cart2} className={style.smallCartIcon} />

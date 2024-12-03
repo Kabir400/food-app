@@ -13,6 +13,7 @@ function Store({ children }) {
     clickedResturant: {},
     searchQuery: "",
     selectedCategory: "",
+    addressPoup: false,
   });
 
   //cart funtionality.................................

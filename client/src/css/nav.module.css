@@ -51,6 +51,12 @@
 .locationLink {
   color: #fc8a06;
   font-size: 12px;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  text-decoration: none;
+}
+.locationLink:hover {
+  transform: scale(1.05);
 }
 
 .cartContainer {

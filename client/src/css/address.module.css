@@ -1,0 +1,148 @@
+.addressContainer {
+  width: 90vw;
+  margin: auto;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  min-height: 80vh;
+  margin-bottom: 40px;
+}
+
+.addressHeadingContainer {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.addressBoxContainer {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.addAddressBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px dotted #afafaf;
+  border-radius: 12px;
+  padding: 30px;
+  width: 311px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.addressDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.addAddress {
+  width: 55px;
+}
+.addAddressHeading {
+  font-weight: 400;
+}
+
+/* address Box */
+
+.addressBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #afafaf;
+  width: 311px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.addressBoxTop {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.addressBoxHeadingContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.addressBoxBottom {
+  display: flex;
+  color: #fc8a06;
+  gap: 10px;
+}
+
+.edit {
+  border-right: 1px solid #afafaf;
+  padding-right: 10px;
+}
+
+.default {
+  background: #ffedd8;
+  border-radius: 100px;
+  padding: 1px 10px;
+  color: #fc8a06;
+  font-size: 13px;
+}
+
+.smallArrowLeft {
+  display: none;
+}
+
+@media (max-width: 730px) {
+  .smallArrowLeft {
+    display: block;
+    width: 32px;
+    height: 33px;
+  }
+  .arrowLeft {
+    display: none;
+  }
+  .addressHeading {
+    font-weight: 500;
+  }
+  .addressBoxContainer {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    overflow: auto;
+  }
+  .addressBox {
+    width: 100%;
+  }
+  .addAddressBox {
+    width: 100%;
+    height: 55px;
+  }
+  .addressDiv {
+    display: flex;
+    flex-direction: row;
+  }
+  .addAddress {
+    width: 38px;
+  }
+  .addAddressHeading {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 350px) {
+  .addressBoxHeading {
+    font-size: 14px;
+  }
+  .addressText,
+  .addressPhone {
+    font-size: 13px;
+  }
+  .edit,
+  .remove {
+    font-size: 14px;
+  }
+  .default {
+    font-size: 11px;
+  }
+}
