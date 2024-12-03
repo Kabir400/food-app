@@ -9,7 +9,7 @@ import paypal from "../assets/paypal.png";
 import strip from "../assets/strip.png";
 import masterCard from "../assets/masterCard.png";
 import deliveryNext from "../assets/deliveryNext.png";
-import add from "../assets/add.png";
+import add from "../assets/Add.png";
 
 import Nav from "../components/Nav";
 
